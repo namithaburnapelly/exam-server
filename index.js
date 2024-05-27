@@ -53,6 +53,11 @@ app.get('/getuser/:name', async (req, res) => {
     res.json(result)
 })
 
+app.get('/getUsers', async (req, res) => {
+    const result = await User.find()
+    res.json(result)
+})
+
 //user registration
 app.post('/register', async (req, res) => {
     const { firstName, lastName, email, phone, userType } = req.body;
