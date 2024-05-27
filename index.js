@@ -54,7 +54,7 @@ app.get('/getuser/:name', async (req, res) => {
 })
 
 app.get('/getUsers', async (req, res) => {
-    const result = await User.find()
+    const result = await User.find({});
     res.json(result)
 })
 
